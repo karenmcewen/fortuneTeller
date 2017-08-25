@@ -48,12 +48,12 @@ namespace FortuneTeller
 
          
             //part 2A - If the user’s age is an odd number, then they will retire in __3__ years, 
-            //      or __23_ years if their age is an even number.
+            //      or __33_ years if their age is an even number.
 
             int retireYears = 40; //default definition for variable used in the if statement
             if (userAge % 2 == 0) //userAge is even
             {
-                retireYears = 23;
+                retireYears = 33;
             }
             else //userAge is odd
             {
@@ -67,14 +67,14 @@ namespace FortuneTeller
             int birthMonth = int.Parse(Console.ReadLine());
             int retireMoolah = 0;
 
-            //part 2D - f the user’s birth month is 1-4, they will have $__1,000,000__ in the bank; 
-            //      if the user's birth month is 5-8, they will have $_500,000,000_ in the bank; 
-            //      and if it is 9-12, then they will have $__25,000__ in the bank. 
+            //part 2D - If the user’s birth month is 1-4, they will have $__1000__ in the bank; 
+            //      if the user's birth month is 5-8, they will have $_500000000_ in the bank; 
+            //      and if it is 9-12, then they will have $__250000__ in the bank. 
             //      If the user enters something other than 01-12 as their birth month, they will have $0.00 in the bank.
 
             if (birthMonth >= 1 && birthMonth <=4)
             {
-                retireMoolah = 1000000;
+                retireMoolah = 1000;
             }
             else if (birthMonth >=5 && birthMonth <=8)
             {
@@ -82,7 +82,7 @@ namespace FortuneTeller
             }
             else if (birthMonth >= 9 && birthMonth <=12)
             {
-                retireMoolah = 25000;
+                retireMoolah = 250000;
             }
 
             else
@@ -95,7 +95,7 @@ namespace FortuneTeller
             //----------------------------------------------------------------------------
             //FAVORITE COLOR
 
-            Console.WriteLine("\nWhat is your favorite color? Your options are ROYGBIV: ");
+            Console.WriteLine("\nWhat is your favorite color? Your options are ROYGBIV (spelling counts!)");
             string favColor = "ecru";//initializing string
             Console.WriteLine("If you do not remember what ROYGBIV is, please type 'help'");
             string answerColor = Console.ReadLine();
@@ -161,12 +161,12 @@ namespace FortuneTeller
             int numSibs = int.Parse(Console.ReadLine());
             string vacationHome = "cleveland";
 
-            //part 2B - If the user’s number of siblings is 0, then they will have a vacation home in __Costa Rica__ (location), 
-            //      or 1 then they will have a vacation home in __the Islands__ (location), 
-            //      or 2 then they will have a vacation home in __the Mountains__ (location), 
-            //      or 3 then they will have a vacation home in _Arizona__ (location), 
-            //      or more than 3 then they will have a vacation home in __the Bronx Zoo___ (location). 
-            //      If the user enters a number that is less than 0, they should get a bad vacation home! (punxatawney, pa)
+            //part 2B - If the user’s number of siblings is 0, then they will have a vacation home in ____ (location), 
+            //      or 1 then they will have a vacation home in ____ (location), 
+            //      or 2 then they will have a vacation home in ____ (location), 
+            //      or 3 then they will have a vacation home in ___ (location), 
+            //      or more than 3 then they will have a vacation home in _____ (location). 
+            //      If the user enters a number that is less than 0, they should get a bad vacation home! 
 
             if (numSibs < 0)
             {
@@ -203,17 +203,18 @@ namespace FortuneTeller
             //      with [Amount of Money] in the bank, 
             //      a vacation home in [Location] and a [Mode of Transportation].
 
-            Console.WriteLine("\nMadame Margaret has looked into the swirling chaos of the crystal ball...\a\a\a\n");
-            Console.WriteLine(firstName + " " + lastName + " will retire in " + retireYears + " years.");
-            Console.WriteLine("You will have $" + retireMoolah + " in the bank, ");
+            Console.WriteLine("\nMadame Margaret has looked into the swirling chaos of the crystal ball...\n");
+            Console.WriteLine(firstName + " " + lastName + " will retire in " + retireYears + " years");
+            Console.WriteLine("with $" + retireMoolah + " in the bank, ");
             Console.WriteLine("a vacation home in " + vacationHome + ",");
-            Console.WriteLine("and a " + modeTransport + ".");
+            Console.WriteLine("and a " + modeTransport + "!");
             Console.WriteLine("\nThe fates have spoken! Have a nice day :)\n");
             //-------------------------------------------------------------------------------------------
 
             //Part 4 (stretch) - Give the user the ability to quit the program at any point 
             //where the program is looking for user input, by typing “Quit” (should not be case sensitive). 
             //The program should print “Nobody likes a quitter...” before ending.
+            //could check after every entry or do some sort of loop?
 
 
 
